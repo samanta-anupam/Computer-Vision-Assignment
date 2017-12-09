@@ -29,21 +29,21 @@ http://docs.opencv.org/3.2.0/dc/dff/tutorial_py_pyramids.html
 
 ## HW2: Image Alignment, Panoramas
 
-The goal was to create 2 panoramas:
-Using homographies and perspective warping on a common plane (3 images).
-Using cylindrical warping (many images).
-In both options we should:
-Read in the images: input1.jpg, input2.jpg, input3.jpg
-[Apply cylindrical wrapping if needed]
-Calculate the transformation (homography for projective; affine for cylindrical) between each
-Transform input2 and input3 to the plane of input1, and produce output.png
-Use Laplacian Blending code to stitch the images together nicely
+The goal was to create 2 panoramas:  
+Using homographies and perspective warping on a common plane (3 images).  
+Using cylindrical warping (many images).  
+In both options we should:  
+Read in the images: input1.jpg, input2.jpg, input3.jpg . 
+[Apply cylindrical wrapping if needed] . 
+Calculate the transformation (homography for projective; affine for cylindrical) between each . 
+Transform input2 and input3 to the plane of input1, and produce output.png . 
+Use Laplacian Blending code to stitch the images together nicely . 
 
 
 
-## HW3: Detection and Tracking
-Goal is to:
-Detect the face in the first frame of the movie . 
+## HW3: Detection and Tracking 
+Goal is to:  
+Detect the face in the first frame of the movie .  
 Using pre-trained Viola-Jones detector  
 Track the face throughout the movie using:  
 CAMShift . 
@@ -80,17 +80,17 @@ show the result immediately to the user (should be fast enough).
 
 Goal is to reconstruct a scene from multiple structured light scannings of it.
 
-Calibrate projector with the “easy” method . 
-Use ray-plane intersection . 
-Get 2D-3D correspondence and use stereo calibration . 
-Get the binary code for each pixel - this you should do, but it's super easy . 
-Correlate code with (x,y) position - we provide a "codebook" from binary code -> (x,y) . 
-With 2D-2D correspondence . 
-Perform stereo triangulation (existing function) to get a depth map . 
-
-Add color to 3D cloud . 
-When finding correspondences, take the RGB values from "aligned001.png" . 
-Add them later to reconstruction . 
-Output a file called "output_color.xyzrgb" with the following format . 
-"%d %d %d %d %d %d\n"%(x, y, z, r, g, b) . 
-for each 3D+RGB point . 
+Calibrate projector with the “easy” method .  
+Use ray-plane intersection .  
+Get 2D-3D correspondence and use stereo calibration .  
+Get the binary code for each pixel - this you should do, but it's super easy .  
+Correlate code with (x,y) position - we provide a "codebook" from binary code -> (x,y) .  
+With 2D-2D correspondence .  
+Perform stereo triangulation (existing function) to get a depth map .  
+ 
+Add color to 3D cloud .  
+When finding correspondences, take the RGB values from "aligned001.png" .  
+Add them later to reconstruction .  
+Output a file called "output_color.xyzrgb" with the following format .  
+"%d %d %d %d %d %d\n"%(x, y, z, r, g, b) .  
+for each 3D+RGB point .  
