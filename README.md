@@ -56,36 +56,41 @@ Face Detector + Optical Flow tracker (use the OF tracker whenever the face detec
 ## HW4: Segmentation
 Perform semi-automatic binary segmentation based on SLIC superpixels and graph-cuts:
 
-Given an image and sparse markings for foreground and background
-Calculate SLIC over image
-Calculate color histograms for all superpixels
-Calculate color histograms for FG and BG
-Construct a graph that takes into account superpixel-to-superpixel interaction (smoothness term), as well as superpixel-FG/BG interaction (match term)
-Run a graph-cut algorithm to get the final segmentation
+Given an image and sparse markings for foreground and background.  
+Calculate SLIC over image.   
+
+Calculate color histograms for all superpixels.  
+
+Calculate color histograms for FG and BG.  
+
+Construct a graph that takes into account superpixel-to-superpixel interaction (smoothness term), as well as superpixel-FG/BG interaction (match term).  
+
+Run a graph-cut algorithm to get the final segmentation.  
+
 
 "Wow factor":
-Make it interactive: Let the user draw the markings
-for every interaction step
-recalculate only the FG-BG histograms,
-construct the graph and get a segmentation from the max-flow graph-cut,
-show the result immediately to the user (should be fast enough).
+Make it interactive: Let the user draw the markings . 
+for every interaction step . 
+recalculate only the FG-BG histograms,  
+construct the graph and get a segmentation from the max-flow graph-cut,  
+show the result immediately to the user (should be fast enough).  
 
 
 ## HW5: Structured Light
 
 Goal is to reconstruct a scene from multiple structured light scannings of it.
 
-Calibrate projector with the “easy” method
-Use ray-plane intersection
-Get 2D-3D correspondence and use stereo calibration
-Get the binary code for each pixel - this you should do, but it's super easy
-Correlate code with (x,y) position - we provide a "codebook" from binary code -> (x,y)
-With 2D-2D correspondence
-Perform stereo triangulation (existing function) to get a depth map
+Calibrate projector with the “easy” method . 
+Use ray-plane intersection . 
+Get 2D-3D correspondence and use stereo calibration . 
+Get the binary code for each pixel - this you should do, but it's super easy . 
+Correlate code with (x,y) position - we provide a "codebook" from binary code -> (x,y) . 
+With 2D-2D correspondence . 
+Perform stereo triangulation (existing function) to get a depth map . 
 
-Add color to 3D cloud
-When finding correspondences, take the RGB values from "aligned001.png"
-Add them later to reconstruction
-Output a file called "output_color.xyzrgb" with the following format
-"%d %d %d %d %d %d\n"%(x, y, z, r, g, b)
-for each 3D+RGB point
+Add color to 3D cloud . 
+When finding correspondences, take the RGB values from "aligned001.png" . 
+Add them later to reconstruction . 
+Output a file called "output_color.xyzrgb" with the following format . 
+"%d %d %d %d %d %d\n"%(x, y, z, r, g, b) . 
+for each 3D+RGB point . 
