@@ -43,14 +43,14 @@ Use Laplacian Blending code to stitch the images together nicely
 
 ## HW3: Detection and Tracking
 Goal is to:
-Detect the face in the first frame of the movie
-Using pre-trained Viola-Jones detector
-Track the face throughout the movie using:
-CAMShift
-Particle Filter
-Face detector + Kalman Filter (always run the kf.predict(), and run kf.correct() when we get a new face detection)
+Detect the face in the first frame of the movie . 
+Using pre-trained Viola-Jones detector  
+Track the face throughout the movie using:  
+CAMShift . 
+Particle Filter . 
+Face detector + Kalman Filter (always run the kf.predict(), and run kf.correct() when we get a new face detection) . 
 
-Face Detector + Optical Flow tracker (use the OF tracker whenever the face detector fails).
+Face Detector + Optical Flow tracker (use the OF tracker whenever the face detector fails).  
 
 
 ## HW4: Segmentation
