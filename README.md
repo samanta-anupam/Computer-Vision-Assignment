@@ -99,15 +99,15 @@ for each 3D+RGB point .
 Train an MNIST CNN classifier on just the digits: 1, 4, 5 and 9 . 
 Architecture (suggested, you may change it):  
 
-"conv1": conv2d 3x3x4, stride=1, ReLU, padding = "SAME" . 
-"conv2": conv2d 3x3x8, stride=2, ReLU, padding = "SAME" . 
-"pool": pool 2x2 . 
-"fc1": fc 16 . 
-"fc2": fc 10 . 
-"softmax": xentropy loss, fc-logits = 4 (we have 4 classes...) . 
+"conv1": conv2d 3x3x4, stride=1, ReLU, padding = "SAME"  
+"conv2": conv2d 3x3x8, stride=2, ReLU, padding = "SAME"  
+"pool": pool 2x2  
+"fc1": fc 16  
+"fc2": fc 10   
+"softmax": xentropy loss, fc-logits = 4 (we have 4 classes...)  
 Optimizer: ADAM . 
-5 epochs, 10 batch size . 
+5 epochs, 10 batch size  
 
-Use your trained model’s weights on the lower 4 layers to train a classifier for the rest of MNIST (excluding 1,4,5 and 9) . 
+Use your trained model’s weights on the lower 4 layers to train a classifier for the rest of MNIST (excluding 1,4,5 and 9)   
 Create new layers for the top (5 and 6)  
-Try to run as few epochs as possible to get a good classification (> 99% on test) . 
+Try to run as few epochs as possible to get a good classification (> 99% on test)  
